@@ -107,8 +107,8 @@ td{
 }
 #descripcion{
     display: block;
-    overflow-y: scroll;
-    height: 30rem;
+    overflow-y: auto;
+    height: 20rem;
 }
 .eliminar{
     top: 10%;
