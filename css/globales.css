@@ -105,6 +105,11 @@ td{
     max-width: 100%;
     height: auto; 
 }
+#descripcion{
+    display: block;
+    overflow-y: scroll;
+    height: 30rem;
+}
 .eliminar{
     top: 10%;
     right: -40px;
