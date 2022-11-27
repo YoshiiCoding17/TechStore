@@ -3,7 +3,7 @@
 <pre>
 Este es la segunda version de mi anterior proyecto TechStore hecho con HTML,TailwindCss y mas codigo JavaScript.
 Pueden probar una demo aqui -> https://tech-store-proyecto.vercel.app/ ^-^
-<p>Espero sea de su agrado</p>
+Espero sea de su agrado🙇
 </pre>
 
 
