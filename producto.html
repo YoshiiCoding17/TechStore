@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/globales.css">
+    <script src="https://kit.fontawesome.com/5202c2347d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-slate-100">
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="contenedor header__contenido flex
+         justify-between py-9 items-center gap-3">
+            <h1 class="text-4xl font-bold text-amber-700">TechStore</h1>
+            <!-- Navegación -->
+        <nav id="navegacion" class="fondo-navegacion  flex flex-col-reverse justify-center gap-5 items-center fixed height100vh bottom-0 w-10/12  md:static md:flex-row lg:justify-between md:gap-1 lg:px-24">
+            <div class="flex flex-col gap-4 items-center md:flex-row">
+                <a href="index.html" class="link hover:scale-105 transition-transform text-lg">Inicio</a>
+                <a href="nosotros.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Nosotros</a>
+                <a href="productos.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Productos</a>
+                <a href="contacto.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Contacto</a>
+            </div>
+            <div class="relative">
+                <input class=" block pl-4 border-buscar outline-none bg-transparent w-4/5 mx-auto text-lg placeholder:text-amber-600 text-amber-600" type="text" placeholder="Buscar...">
+                <i class="absolute fa-solid fa-magnifying-glass top-1 left-6 text-amber-600"></i>
+            </div>
+            <div class="flex flex-col gap-3 md:flex-row">
+                <i class="text-xl fa-solid fa-cart-shopping text-amber-600 hover:cursor-pointer"></i>
+                <i class="text-xl fa-solid fa-user text-amber-600 hover:cursor-pointer"></i>
+            </div>
+            <i id="cerrar"class="invisiblexd text-2xl hover:cursor-pointer absolute top-10 right-10 fa-solid fa-x text-amber-600"></i>
+        </nav>
+        <!-- Fin navegacion -->
+        <i id="abrir" class="text-2xl invisiblexd  hover:cursor-pointer fa-solid fa-bars text-amber-600"></i>
+        </div>
+    </header>
+    <!-- Fin Header -->
+    <main class="contenedor contenedor--producto md:grid md:grid-cols-2">
+        <section>
+            <img class="imagen-producto w-full" src="" alt="imagen producto"/>
+        </section>
+        <section class="p-10">
+            <h2 class="titulo font-bold text-amber-600 text-4xl"></h2>
+            <p class="precio-anterior line-through text-2xl inline-block"></p>
+            <p class="precio text-amber-500 inline-block text-3xl ml-3 font-bold"></p>
+            <div class="mb-5 mt-5">
+                <p class="mb-3">Cantidad:</p>
+                <input type="number" class="input-cantidad p-1" min="1" value="1">
+            </div>
+            <a href="" class="uppercase inline-block text-slate-200 bg-amber-500 py-2 px-5 hover:bg-amber-700 hover:text-slate-100 mb-5">Agregar al carrito</a>
+            <div class="flex gap-5">
+                <p class="text-amber-600">-<span class="text-amber-500">Entrega en 24 horas</span></p>
+                <p class="text-amber-600">-<span class="text-amber-500">Compra Segura</span></p>
+                <p class="text-amber-600">-<span class="text-amber-500">Atención Post Venta</span></p>
+            </div>
+        </section> 
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-600 py-8">
+        <div class="contenedor flex flex-col md:flex-row gap-3 md:justify-between">
+            <div class="md:flex items-center">
+                <p class="text-slate-100 text-xl">©Copyright 2022 <span class="block">TechStore,Todos los derechos reservados</span></p>
+            </div>
+            <div>
+                <h3 class="text-slate-100 mb-5 text-xl">Nuestras Redes Sociales:</h3>
+                <div class="flex flex-col md:flex-row gap-4 md:items-center justify-center text-amber-700">
+                    <a href="https://facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                    <a href="tel:945-388-903">
+                        <i class="fa-solid fa-phone text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                </div>    
+                <p class="text-slate-100 mt-5 ">Hora actual: <span class="hora"></span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer fin -->
+    <script src="js/app.js"></script>
+    <script type="module" src="js/producto.js"></script>
+</body>
+</html>

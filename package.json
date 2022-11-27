@@ -1,0 +1,19 @@
+{
+  "name": "techstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwindbuild": "tailwindcss -i styles.css -o ./css/styles.css --watch"
+  },
+  "author": "Jeff & Jose",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.6.5"
+  }
+}

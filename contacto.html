@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/globales.css">
+    <script src="https://kit.fontawesome.com/5202c2347d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-slate-100">
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="contenedor header__contenido flex
+         justify-between py-9 items-center gap-3">
+            <h1 class="text-4xl font-bold text-amber-700">TechStore</h1>
+            <!-- Navegación -->
+        <nav id="navegacion" class="fondo-navegacion  flex flex-col-reverse justify-center gap-5 items-center fixed height100vh bottom-0 w-10/12  md:static md:flex-row lg:justify-between md:gap-1 lg:px-24">
+            <div class="flex flex-col gap-4 items-center md:flex-row">
+                <a href="index.html" class="link hover:scale-105 transition-transform text-lg">Inicio</a>
+                <a href="nosotros.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Nosotros</a>
+                <a href="productos.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Productos</a>
+                <a href="contacto.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Contacto</a>
+            </div>
+            <div class="relative">
+                <input class=" block pl-4 border-buscar outline-none bg-transparent w-4/5 mx-auto text-lg placeholder:text-amber-600 text-amber-600" type="text" placeholder="Buscar...">
+                <i class="absolute fa-solid fa-magnifying-glass top-1 left-6 text-amber-600"></i>
+            </div>
+            <div class="flex flex-col gap-3 md:flex-row">
+                <i class="text-xl fa-solid fa-cart-shopping text-amber-600 hover:cursor-pointer"></i>
+                <i class="text-xl fa-solid fa-user text-amber-600 hover:cursor-pointer"></i>
+            </div>
+            <i id="cerrar"class="invisiblexd text-2xl hover:cursor-pointer absolute top-10 right-10 fa-solid fa-x text-amber-600"></i>
+        </nav>
+        <!-- Fin navegacion -->
+        <i id="abrir" class="text-2xl invisiblexd  hover:cursor-pointer fa-solid fa-bars text-amber-600"></i>
+        </div>
+    </header>
+    <!-- Fin Header -->
+    <!-- Formulario -->
+    <main class="max-w-3xl mx-auto w-11/12">
+        <h2 class="text-center text-3xl  text-amber-700 uppercase
+        font-bold mb-10 mt-10">Contáctanos</h2>
+        <section class=" mb-10 bg-amber-700 p-10 rounded-2xl">
+            <form action="" id="formulario">
+                <div id="nombreDiv" class="mb-10">
+                    <label class="mb-3  inline-block text-xl text-amber-400" for="nombre">Nombre</label>
+                    <input id="nombre" class="block w-full outline-none p-1" type="text">
+                </div>
+                <div id="correoDiv" class="mb-10">
+                    <label class="mb-3 inline-block text-xl text-amber-400" for="correo">Correo</label>
+                    <input id="correo" class="block  w-full outline-none p-1" type="email">
+                </div>
+                <div id="telefonoDiv" class="mb-10 ">
+                    <label class="mb-3 inline-block text-xl text-amber-400" for="telefono">Telefono</label>
+                    <input id="telefono" class="block  w-full outline-none p-1 xd" type="tel">
+                </div>
+                <div id="mensajeDiv" class="mb-10">
+                    <label class="mb-3 inline-block text-xl text-amber-400" for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" class="block  w-full outline-none p-1 resize-none" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <input type="submit" class="text-slate-200 bg-amber-500 py-2 px-10 hover:bg-slate-100 hover:text-amber-500 transition-colors hover:transition-colors hover:cursor-pointer" value="Enviar Formulario">
+                </div>
+            
+        </section>
+    </main>
+    <!-- Formulario Fin -->
+     <!-- Footer -->
+     <footer class="bg-amber-600 py-8">
+        <div class="contenedor flex flex-col md:flex-row gap-3 md:justify-between">
+            <div class="md:flex items-center">
+                <p class="text-slate-100 text-xl">©Copyright 2022 <span class="block">TechStore,Todos los derechos reservados</span></p>
+            </div>
+            <div>
+                <h3 class="text-slate-100 mb-5 text-xl">Nuestras Redes Sociales:</h3>
+                <div class="flex flex-col md:flex-row gap-4 md:items-center justify-center text-amber-700">
+                    <a href="https://facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                    <a href="tel:945-388-903">
+                        <i class="fa-solid fa-phone text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                </div>    
+                <p class="text-slate-100 mt-5 ">Hora actual: <span class="hora"></span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer fin -->
+    <script src="js/app.js"></script>
+    <script type="module"src="js/formulario.js"></script>
+</body>
+</html>

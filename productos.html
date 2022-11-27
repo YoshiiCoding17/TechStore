@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/globales.css">
+    <script src="https://kit.fontawesome.com/5202c2347d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-slate-100">
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="contenedor header__contenido flex
+         justify-between py-9 items-center gap-3">
+            <h1 class="text-4xl font-bold text-amber-700">TechStore</h1>
+            <!-- Navegación -->
+        <nav id="navegacion" class="fondo-navegacion  flex flex-col-reverse justify-center gap-5 items-center fixed height100vh bottom-0 w-10/12  md:static md:flex-row lg:justify-between md:gap-1 lg:px-24">
+            <div class="flex flex-col gap-4 items-center md:flex-row">
+                <a href="index.html" class="link hover:scale-105 transition-transform text-lg">Inicio</a>
+                <a href="nosotros.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Nosotros</a>
+                <a href="productos.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Productos</a>
+                <a href="contacto.html" class="link  hover:scale-105 hover:text-amber-400 transition-transform text-lg">Contacto</a>
+            </div>
+            <div class="relative">
+                <input class=" block pl-4 border-buscar outline-none bg-transparent w-4/5 mx-auto text-lg placeholder:text-amber-600 text-amber-600" type="text" placeholder="Buscar...">
+                <i class="absolute fa-solid fa-magnifying-glass top-1 left-6 text-amber-600"></i>
+            </div>
+            <div class="flex flex-col gap-3 md:flex-row relative">
+                <i id="#carrito" class="text-xl fa-solid fa-cart-shopping text-amber-600 hover:cursor-pointer cursor-pointer"></i>
+                <table id="contenido-carrito">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="descripcion">
+                        
+                    </tbody>
+                </table>
+                <i class="text-xl fa-solid fa-user text-amber-600 hover:cursor-pointer"></i>
+            </div>
+            <i id="cerrar"class="invisiblexd text-2xl hover:cursor-pointer absolute top-10 right-10 fa-solid fa-x text-amber-600"></i>
+        </nav>
+        <!-- Fin navegacion -->
+        <i id="abrir" class="text-2xl invisiblexd  hover:cursor-pointer fa-solid fa-bars text-amber-600"></i>
+        </div>
+    </header>
+    <!-- Fin Header -->
+
+    <!-- Seccion Productos Destacados -->
+    <main class="mt-20 mb-28">
+        <div class="md:grid md:grid-cols-4 md:gap-x-16 contenedor">
+            <aside>
+                <div class="bg-amber-700 p-5">
+                    <h2 class="text-slate-100 text-3xl">Filtrar</h2>
+                    <ul>
+                        <p class="text-xl text-amber-500">Productos</p>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Computadoras</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Laptops</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Monitores</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Accesorios</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Procesadores</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Case</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Mouse</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Audifonos Gamer</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Mandos</span></li>
+                    </ul>
+                    <ul>
+                        <p class="text-xl text-amber-500">Marcas</p>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">AMD</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Intel</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Logitech</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Razer</span></li>
+                        <li class="pl-4 text-amber-500">- <span class="text-amber-50 hover:text-amber-400 transition-colors hover:cursor-pointer filtrado">Redragon</span></li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="col-start-2 col-end-5">
+                <h2 class="text-center text-3xl font-bold uppercase tituloProductos mt-5 md:mt-0 text-amber-700 ">Nuestros Productos</h2>
+                <div class="productos grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Seccion Productos Destacados Fin -->
+
+    <!-- Footer -->
+    <footer class="bg-amber-600 py-8">
+        <div class="contenedor flex flex-col md:flex-row gap-3 md:justify-between">
+            <div class="md:flex items-center">
+                <p class="text-slate-100 text-xl">©Copyright 2022 <span class="block">TechStore,Todos los derechos reservados</span></p>
+            </div>
+            <div>
+                <h3 class="text-slate-100 mb-5 text-xl">Nuestras Redes Sociales:</h3>
+                <div class="flex flex-col md:flex-row gap-4 md:items-center justify-center text-amber-700">
+                    <a href="https://facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                    <a href="tel:945-388-903">
+                        <i class="fa-solid fa-phone text-2xl hover:scale-105 hover:text-amber-100 transition-transform"></i>
+                    </a>
+                </div>    
+                <p class="text-slate-100 mt-5 ">Hora actual: <span class="hora"></span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer fin -->
+    <script src="js/app.js"></script>
+    <script type="module" src="js/productos.js"></script>
+</body>
+</html>
